@@ -1,0 +1,161 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Machine Embroidery</title>
+  </head>
+  <style>
+    body {
+      background: radial-gradient(859px at 10% 20%, rgb(245, 220, 154) 0%, rgb(164, 78, 51) 90%);
+    }
+    .theme-button {
+        display:block;
+        margin: 0 auto;
+        text-align: center;
+        font size: 12px;
+        color: white;
+        background: black;
+        transition: all 150ms ease-in-out;
+
+    }
+    img {
+      max-width: 100%;
+    }
+    .container {
+      background-color: white;
+      max-width: 600px;
+      border-radius: 10px;
+      padding: 20px;
+     margin: 15px auto;
+     text-align: center;
+    }
+    h1 {
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    .machine-intro-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+
+    }
+    .machine-intro-picture:hover {
+        transform: scale(1.1);
+        filter: contrast(80%);
+
+    }
+    button {
+      background-color: #8ef6e4;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      transition: all 200ms ease-in-out;
+    }
+    footer {
+        text-align: center;
+        font-size: 18px;
+        margin: 10px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: justify;
+
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+
+    }
+    .grid img {
+        width: 100%;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+    }
+    .grid img:hover {
+        transform: scale(1.5);
+
+    }
+    .dark {
+        background: linear-gradient(to right, #434343 0%, black 100%);
+        color: white;
+    }
+    .dark .container {
+        background: #5c5470;
+        color: white:
+    }
+    .dark a {
+        color: bisque;
+    }
+  </style>
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+      <h1>Machine Embroidery</h1>
+      <h2>So many amazing possibilities! 🌺</h2>
+      <a href="https://janome.com.au/product/mc550e/" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/493/original/Janomee___0E.jpg?1674089461"
+          class="machine-intro-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/492/original/giraffe.jpg?1674089451"
+          alt="giraffe"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/494/original/KK_Friends.jpg?1674089474"
+          alt="KK Friends"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/491/original/butterfly.jpg?1674089441"
+          alt=" butterfly"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/495/original/sewing_machine.jpg?1674089488"
+          alt="sewing machine"
+        />
+      </div>
+      <p>
+        Machine embroidery is an embroidery process whereby a sewing machine or
+        embroidery machine is used to create patterns on textiles. It is used
+        commercially in product branding, corporate advertising, and uniform
+        adornment. It is also used in the fashion industry to decorate garments
+        and apparel. Machine embroidery is used by hobbyists and crafters to
+        decorate gifts, clothing, and home decor. Examples include designs on
+        quilts, pillows, and wall hangings.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Machine_embroidery" target="blank"
+        >📖 Learn More at Wikipedia</a
+      >
+      <br />
+      <button class="started">Get Started</button>
+    </div>
+    <footer>Coded by Tracy Vonk 🐞</footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+      function start() {
+        alert(
+          "For more information and projects go to Kreative Kiwi Website! https://www.kreativekiwiembroidery.co.nz/ Happy Sewing! 😁 "
+        );
+      }
+      let started = document.querySelector(".started");
+      started.addEventListener("click", start);
+    </script>
+  </body>
+</html>
